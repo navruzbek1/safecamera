@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safecamera"
+version = "0.1.0"
+description = "Protect a Windows PC with the webcam: face lock and shoulder-surfing blur."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python>=4.8",
+    "numpy",
+    "Pillow>=10.0",
+    "pystray>=0.19",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+safecamera = "safecamera.app:main"
+
+[tool.setuptools]
+packages = ["safecamera"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

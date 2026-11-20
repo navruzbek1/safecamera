@@ -1,0 +1,4 @@
+opencv-python>=4.8   # FaceDetectorYN (YuNet) is required
+numpy
+Pillow>=10.0
+pystray>=0.19

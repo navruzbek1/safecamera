@@ -1,0 +1,17 @@
+# Biometric / personal data and downloaded models (never commit)
+owner_face.npy
+*.npy
+*.onnx
+
+# Python / IDE
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.idea/
+.vscode/
