@@ -115,6 +115,32 @@ tests/            pytest
 scripts/          enroll.bat
 ```
 
+<details>
+<summary><b>O'zbekcha qisqacha</b></summary>
+
+**SafeCamera** veb-kamera yordamida Windows kompyuterni himoya qiladi:
+
+- Egasi kompyuterdan uzoqlashsa, ekranni **yuz qulfi** bilan yopadi va egasining yuzi tanilganda
+  qulfni o'zi ochadi.
+- Begona odam ekranga qarasa (yon tomondan yoki orqadan), ekranni **xiralashtiradi**.
+- Kamera ishlamasa, Ctrl+Alt+Del bosilsa yoki egasi uzoq qaytmasa, haqiqiy Windows qulfiga
+  (Win+L) o'tadi.
+
+Hammasi lokal ishlaydi (OpenCV: YuNet va SFace modellari), kadrlar saqlanmaydi va hech qayerga
+yuborilmaydi. Egasining yuzi rasm emas, yuz "izlari" (embedding) sifatida
+`%LOCALAPPDATA%\SafeCamera` papkasida saqlanadi.
+
+```bash
+python -m pip install -e .
+python -m safecamera --enroll    # bir marta: egasining yuzini saqlash
+python -m safecamera             # ishga tushirish
+```
+
+**Cheklovlar:** faqat Windows; jonlilik tekshiruvi (liveness) yo'q, ya'ni egasining
+fotosurati yuz qulfini ochishi mumkin. Yuz qulfi qulaylik uchun, xavfsizlik chegarasi emas.
+
+</details>
+
 ## License
 
 MIT, see [LICENSE](LICENSE).
